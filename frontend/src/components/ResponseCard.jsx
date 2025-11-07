@@ -33,6 +33,16 @@ const ResponseCard = ({ llmName, response, isLoading, error, metadata, showMetad
         return `${Math.floor(seconds / 3600)}h ${Math.floor((seconds % 3600) / 60)}m`;
     };
 
+    const getSubtitle = () => {
+        if (metadata?.model) {
+            return metadata.model;
+        }
+        if (response || isLoading) {
+            return 'Loading model info...';
+        }
+        return 'Ready';
+    };
+
     return (
         <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-xl shadow-lg p-5 sm:p-6 border border-gray-200/50 dark:border-gray-700/50 transition-all duration-300 hover:shadow-xl">
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4 gap-2">
@@ -40,7 +50,9 @@ const ResponseCard = ({ llmName, response, isLoading, error, metadata, showMetad
                     <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-gray-50 truncate">
                         {formatModelName(llmName)}
                     </h3>
-                    <p className="text-xs text-gray-500 dark:text-gray-400 mt-1 truncate">{llmName}</p>
+                    <p className="text-xs text-gray-500 dark:text-gray-400 mt-1 truncate">
+                        {getSubtitle()}
+                    </p>
                 </div>
                 {isLoading && (
                     <div className="flex items-center text-indigo-600 dark:text-indigo-400 self-start sm:self-center">
