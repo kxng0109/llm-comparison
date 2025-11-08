@@ -1,7 +1,8 @@
 # LLM Comparison Tool
 
-![Backend CI](https://github.com/kxng0109/llm-comparison-tool/workflows/Backend%20CI%2FCD/badge.svg)
-![Frontend CI](https://github.com/kxng0109/llm-comparison-tool/workflows/Frontend%20CI%2FCD/badge.svg)
+[![Backend CI/CD](https://github.com/kxng0109/llm-comparison-tool/actions/workflows/backend-ci.yml/badge.svg?branch=master)](https://github.com/kxng0109/llm-comparison-tool/actions/workflows/backend-ci.yml)
+[![Frontend CI/CD](https://github.com/kxng0109/llm-comparison-tool/actions/workflows/frontend-ci.yml/badge.svg?branch=master)](https://github.com/kxng0109/llm-comparison-tool/actions/workflows/frontend-ci.yml)
+[![Full Stack CI](https://github.com/kxng0109/llm-comparison-tool/actions/workflows/full-ci.yml/badge.svg?branch=master)](https://github.com/kxng0109/llm-comparison-tool/actions/workflows/full-ci.yml)
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
 A modern full-stack web application to compare responses from multiple Large Language Models (LLMs) side-by-side. Compare OpenAI, Anthropic Claude, Ollama, and more in real-time.
